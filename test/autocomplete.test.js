@@ -2,11 +2,14 @@ it('Shows an autocomplete', () => {
     createAutoComplete({
         root: document.querySelector('#target'),
         fetchData() {
-            return[
+            return [
                 { Title: 'Avengers' },
                 { Title: 'Not Avengers' },
-                { Title: 'Some Other Movie' },
+                { Title: 'Some Other Movie' }
             ];
+        },
+        renderOption(movie) {
+            return movie.Title;
         }
     });
 });
