@@ -22,5 +22,7 @@ it('Dropdown starts closed', () => {
 });
 
 it('After searching, dropdown opens up', () => {
-
+    const input = document.querySelector('input');
+    input.value = 'avengers';
+    input.dispatchEvent(new Event('input'));
 });
